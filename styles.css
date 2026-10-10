@@ -502,6 +502,33 @@ p {
   transform: scale(1.03);
 }
 
+.board-hero h1 {
+  max-width: 10ch;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.board-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--white);
+  border: 1px solid rgba(20, 45, 79, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.board-card img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.board-card .card-body p {
+  min-height: 0;
+}
+
 .faq-shell {
   padding: 3rem;
   background: linear-gradient(180deg, rgba(238, 243, 248, 0.72), rgba(255, 255, 255, 0.96));
@@ -775,7 +802,8 @@ p {
   .stats-grid,
   .history-grid,
   .project-overview,
-  .project-contact {
+  .project-contact,
+  .board-grid {
     grid-template-columns: 1fr;
   }
 
