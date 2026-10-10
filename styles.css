@@ -457,6 +457,27 @@ p {
   object-fit: cover;
 }
 
+.transparent-image-panel {
+  background: transparent;
+  box-shadow: none;
+}
+
+.transparent-image-panel img {
+  object-fit: contain;
+}
+
+.venture-cup-panel {
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+}
+
+.venture-cup-panel img {
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+}
+
 .image-panel.tall img {
   min-height: 540px;
 }
@@ -928,6 +949,11 @@ p {
   .image-panel.tall img {
     min-height: 260px;
     height: 260px;
+  }
+
+  .venture-cup-panel img {
+    height: auto;
+    min-height: 0;
   }
 
   .campfire-panel,
