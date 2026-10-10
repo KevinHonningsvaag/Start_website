@@ -126,7 +126,7 @@ a {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
   overflow: hidden;
-  background-image: url("./assets/images/IMG_5385.png");
+  background-image: url("./assets/images/Urbygget.jpg");
   background-repeat: no-repeat;
   background-position: 62% 45%;
   background-size: cover;
@@ -293,7 +293,7 @@ p {
   color: var(--white);
   background:
     linear-gradient(rgba(13, 29, 52, 0.84), rgba(20, 45, 79, 0.8)),
-    url("./assets/images/IMG_5385.png") center/cover no-repeat;
+    url("./assets/images/Urbygget.jpg") center/cover no-repeat;
 }
 
 .about-hero-shell .eyebrow,
@@ -570,7 +570,7 @@ p {
   color: var(--white);
   background:
     linear-gradient(rgba(13, 29, 52, 0.82), rgba(20, 45, 79, 0.84)),
-    url("./assets/images/IMG_5385.png") center/cover no-repeat;
+    url("./assets/images/Urbygget.jpg") center/cover no-repeat;
 }
 
 .project-hero-shell {
@@ -670,7 +670,7 @@ p {
   place-items: center;
   background:
     linear-gradient(rgba(13, 29, 52, 0.84), rgba(20, 45, 79, 0.82)),
-    url("./assets/images/IMG_5385.png") center/cover no-repeat;
+    url("./assets/images/Urbygget.jpg") center/cover no-repeat;
 }
 
 .recruit-shell {
