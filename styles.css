@@ -50,19 +50,19 @@ body[data-theme="light"] {
   --text: #18302f;
   --muted: #647774;
   --white: #ffffff;
-  --coral: #2f80c9;
+  --coral: #123c3a;
   --sage: #9fba9b;
   --surface: #ffffff;
   --surface-soft: #f7f4ea;
   --border: rgba(18, 60, 58, 0.13);
   --shadow: 0 24px 70px rgba(8, 38, 37, 0.12);
   --body-bg:
-    radial-gradient(circle at 8% 0%, rgba(47, 128, 201, 0.16), transparent 30%),
+    radial-gradient(circle at 8% 0%, rgba(18, 60, 58, 0.16), transparent 30%),
     radial-gradient(circle at 92% 12%, rgba(159, 186, 155, 0.22), transparent 28%),
     linear-gradient(180deg, #fbfaf5 0%, #ffffff 24%, #eef5f2 100%);
   --section-soft-bg: linear-gradient(180deg, rgba(231, 242, 239, 0.9), rgba(255, 255, 255, 0.82));
   --section-accent-bg:
-    radial-gradient(circle at right top, rgba(47, 128, 201, 0.16), transparent 24%),
+    radial-gradient(circle at right top, rgba(18, 60, 58, 0.16), transparent 24%),
     radial-gradient(circle at left bottom, rgba(159, 186, 155, 0.22), transparent 28%),
     var(--sand);
   --header-bg: rgba(251, 250, 245, 0.9);
@@ -70,7 +70,7 @@ body[data-theme="light"] {
     hue-rotate(128deg) brightness(92%) contrast(92%);
   --hero-overlay:
     linear-gradient(90deg, rgba(8, 38, 37, 0.9), rgba(8, 38, 37, 0.58)),
-    radial-gradient(circle at 18% 24%, rgba(47, 128, 201, 0.18), transparent 32%);
+    radial-gradient(circle at 18% 24%, rgba(18, 60, 58, 0.18), transparent 32%);
   --about-overlay: linear-gradient(rgba(8, 38, 37, 0.86), rgba(18, 60, 58, 0.78));
   --project-overlay: linear-gradient(rgba(8, 38, 37, 0.84), rgba(18, 60, 58, 0.82));
   --recruit-overlay: linear-gradient(rgba(8, 38, 37, 0.86), rgba(18, 60, 58, 0.78));
@@ -209,6 +209,11 @@ body[data-theme="light"] .nav-cta {
   font: inherit;
 }
 
+body[data-theme="light"] .menu-toggle {
+  background: var(--coral);
+  color: var(--white);
+}
+
 .hero {
   position: relative;
   padding-top: 4.5rem;
@@ -319,7 +324,7 @@ p {
 
 .button-primary {
   background: var(--coral);
-  color: #111314;
+  color: #ffffff;
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
 }
 
@@ -491,7 +496,7 @@ body[data-theme="light"] .button-secondary {
 }
 
 body[data-theme="light"] .timeline-item::before {
-  box-shadow: 0 0 0 6px rgba(47, 128, 201, 0.16);
+  box-shadow: 0 0 0 6px rgba(18, 60, 58, 0.16);
 }
 
 .timeline-date {
@@ -846,7 +851,7 @@ body[data-theme="light"] .project-logo img {
 }
 
 body[data-theme="light"] .activity-list li::before {
-  box-shadow: 0 0 0 5px rgba(47, 128, 201, 0.15);
+  box-shadow: 0 0 0 5px rgba(18, 60, 58, 0.15);
 }
 
 .project-contact {
