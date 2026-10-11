@@ -31,6 +31,15 @@ const setTheme = (theme) => {
   }
 };
 
+const closeNav = () => {
+  if (!menuToggle || !nav) {
+    return;
+  }
+
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+};
+
 const savedTheme = themeStorage.get();
 setTheme(savedTheme);
 
@@ -39,6 +48,7 @@ if (themeToggle) {
     const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
     themeStorage.set(nextTheme);
     setTheme(nextTheme);
+    closeNav();
   });
 }
 
@@ -50,8 +60,7 @@ if (menuToggle && nav) {
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+      closeNav();
     });
   });
 }
