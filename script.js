@@ -76,6 +76,7 @@ const countdown = document.querySelector(".countdown");
 
 if (countdown) {
   const targetDate = new Date(countdown.dataset.target);
+  const redirectUrl = countdown.dataset.redirectUrl;
   const daysEl = countdown.querySelector('[data-unit="days"]');
   const hoursEl = countdown.querySelector('[data-unit="hours"]');
   const minutesEl = countdown.querySelector('[data-unit="minutes"]');
@@ -93,6 +94,9 @@ if (countdown) {
       if (secondsEl) secondsEl.textContent = "0";
       if (messageEl) {
         messageEl.textContent = "Opptaket er i gang.";
+      }
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
       }
       return;
     }
