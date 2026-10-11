@@ -1,5 +1,46 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
+const themeToggle = document.querySelector(".theme-toggle");
+
+const themeStorage = {
+  get() {
+    try {
+      return localStorage.getItem("theme");
+    } catch {
+      return null;
+    }
+  },
+  set(theme) {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      // Theme still changes for the current page even if storage is blocked.
+    }
+  },
+};
+
+const setTheme = (theme) => {
+  const nextTheme = theme === "light" ? "light" : "dark";
+
+  document.body.dataset.theme = nextTheme;
+
+  if (themeToggle) {
+    const label = nextTheme === "dark" ? "Light" : "Dark";
+    themeToggle.textContent = label;
+    themeToggle.setAttribute("aria-label", `Bytt til ${label.toLowerCase()} theme`);
+  }
+};
+
+const savedTheme = themeStorage.get();
+setTheme(savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+    themeStorage.set(nextTheme);
+    setTheme(nextTheme);
+  });
+}
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
